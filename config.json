@@ -22,45 +22,8 @@
     },
     {
       "type": "spacer",
-      "id": "9",
-      "height": 10
-    },
-    {
-      "type": "card",
-      "id": "10",
-      "paddingH": 20,
-      "paddingV": 16,
-      "color": "#1FB800",
-      "cornerRadius": 5,
-      "borderColor": "#EEFF00",
-      "borderWidth": 4,
-      "actionName": "card_tap",
-      "children": [
-        {
-          "type": "text",
-          "id": "11",
-          "text": "Click Handling",
-          "color": "#FFFFFF",
-          "fontSize": 18
-        },
-        {
-          "type": "spacer",
-          "id": "12",
-          "height": 4
-        },
-        {
-          "type": "text",
-          "id": "13",
-          "text": "Tap this card — the click event is handled by the host app.",
-          "color": "#FFF700",
-          "fontSize": 13
-        }
-      ]
-    },
-    {
-      "type": "spacer",
       "id": "4",
-      "height": 25
+      "height": 20
     },
     {
       "type": "card",
@@ -88,6 +51,43 @@
           "type": "text",
           "id": "8",
           "text": "Add, remove, reorder UI elements from the web — no app update needed.",
+          "color": "#666666",
+          "fontSize": 13
+        }
+      ]
+    },
+    {
+      "type": "spacer",
+      "id": "9",
+      "height": 10
+    },
+    {
+      "type": "card",
+      "id": "10",
+      "paddingH": 20,
+      "paddingV": 16,
+      "color": "#FFFFFF",
+      "cornerRadius": 20,
+      "borderColor": "#E0D6F2",
+      "borderWidth": 1,
+      "actionName": "card_tap",
+      "children": [
+        {
+          "type": "text",
+          "id": "11",
+          "text": "Click Handling",
+          "color": "#1A1A2E",
+          "fontSize": 18
+        },
+        {
+          "type": "spacer",
+          "id": "12",
+          "height": 4
+        },
+        {
+          "type": "text",
+          "id": "13",
+          "text": "Tap this card — the click event is handled by the host app.",
           "color": "#666666",
           "fontSize": 13
         }
@@ -148,6 +148,7 @@
       "textColor": "#FFFFFF",
       "fontSize": 16,
       "cornerRadius": 28,
+      "actionName": "navigate:detail",
       "borderColor": "#7E57C2",
       "borderWidth": 2
     },
@@ -165,21 +166,6 @@
       "fontSize": 16,
       "cornerRadius": 28,
       "actionName": "navigate:estimates"
-    },
-    {
-      "type": "spacer",
-      "id": "98",
-      "height": 16
-    },
-    {
-      "type": "button",
-      "id": "97",
-      "text": "Button",
-      "color": "#6200EA",
-      "textColor": "#FFFFFF",
-      "fontSize": 11,
-      "cornerRadius": 16,
-      "actionName": "navigate:detail"
     }
   ]
 }

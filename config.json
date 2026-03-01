@@ -106,7 +106,7 @@
           "type": "button",
           "id": "16",
           "text": "Action A",
-          "color": "#EB00C0",
+          "color": "#003BEB",
           "textColor": "#FFFFFF",
           "fontSize": 14,
           "cornerRadius": 24,

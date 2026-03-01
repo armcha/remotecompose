@@ -22,6 +22,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: 'gradle'
 
       - name: Convert JSON configs to binary .rc files
         run: |

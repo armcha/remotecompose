@@ -4,7 +4,7 @@ A showcase of [AndroidX Remote Compose](https://developer.android.com/jetpack/an
 
 **Live editor:** [Web Editor](https://achatikyan.github.io/remotecompose/)
 
-<img width="1000" height="1011" alt="image" src="https://github.com/user-attachments/assets/8f260f19-28f7-49d3-bb50-e7a066663536" />
+https://github.com/user-attachments/assets/e6ac7586-1d85-4c68-a751-ca8ffb71a59f
 
 ## Architecture
 

@@ -50,7 +50,7 @@
         {
           "type": "text",
           "id": "8",
-          "text": "Add, remove, reorder UI elements from the web — no app update needed.",
+          "text": "Add, remove, reorder UI elements from the web \u2014 no app update needed.",
           "color": "#666666",
           "fontSize": 13
         }
@@ -87,7 +87,7 @@
         {
           "type": "text",
           "id": "13",
-          "text": "Tap this card — the click event is handled by the host app.",
+          "text": "Tap this card \u2014 the click event is handled by the host app.",
           "color": "#666666",
           "fontSize": 13
         }
@@ -158,14 +158,11 @@
       "height": 8
     },
     {
-      "type": "button",
+      "type": "text",
       "id": "23",
-      "text": "View Estimates",
-      "color": "#00897B",
-      "textColor": "#FFFFFF",
-      "fontSize": 16,
-      "cornerRadius": 28,
-      "actionName": "navigate:estimates"
+      "text": "Change anything from the browser. No app update needed.",
+      "color": "#9CA3AF",
+      "fontSize": 12
     }
   ]
 }

@@ -139,8 +139,7 @@
         <span class="lbl">Screen:</span>
         <button class="screen-tab active" id="tab-home" onclick="switchScreen('home')"><span class="material-icons-round">home</span>Home</button>
         <button class="screen-tab" id="tab-detail" onclick="switchScreen('detail')"><span class="material-icons-round">article</span>Detail</button>
-        <button class="screen-tab" id="tab-estimates" onclick="switchScreen('estimates')"><span class="material-icons-round">receipt_long</span>Estimates</button>
-        <button class="screen-tab" id="tab-estimate_detail" onclick="switchScreen('estimate_detail')"><span class="material-icons-round">description</span>Est. Detail</button>
+
     </div>
     <main>
         <div class="panel">
@@ -178,9 +177,7 @@
 const REPO='achatikyan',REPO_N='remotecompose';
 const screens={
     home:{file:'config.json',label:'Home',elements:[],bg:'#F5F0FF',scrollable:false,padding:null},
-    detail:{file:'config_detail.json',label:'Detail',elements:[],bg:'#F0F4F8',scrollable:false,padding:null},
-    estimates:{file:'config_estimates.json',label:'Estimates',elements:[],bg:'#FAFAFA',scrollable:true,padding:12},
-    estimate_detail:{file:'config_estimate_detail.json',label:'Est. Detail',elements:[],bg:'#FFFFFF',scrollable:true,padding:12}
+    detail:{file:'config_detail.json',label:'Detail',elements:[],bg:'#F0F4F8',scrollable:false,padding:null}
 };
 let activeScreen='home';
 let elements=[],dragIdx=null,nextId=1,expandedIdx=-1,expandedChildId=null,expandedGcId=null;
@@ -212,7 +209,7 @@ const defaultsHome=[
     {type:'spacer',height:6},
     {type:'button',text:'Go to Detail Screen',color:'#4A148C',textColor:'#FFFFFF',fontSize:16,cornerRadius:28,actionName:'navigate:detail',borderColor:'#7E57C2',borderWidth:2},
     {type:'spacer',height:8},
-    {type:'button',text:'View Estimates',color:'#00897B',textColor:'#FFFFFF',fontSize:16,cornerRadius:28,actionName:'navigate:estimates'}
+    {type:'text',text:'Change anything from the browser. No app update needed.',color:'#9CA3AF',fontSize:12}
 ];
 const defaultsDetail=[
     {type:'spacer',height:8},
@@ -248,8 +245,8 @@ const defaultsDetail=[
     {type:'spacer',height:12},
     {type:'text',text:'No app update required.',color:'#9CA3AF',fontSize:11}
 ];
-function init(){const t=localStorage.getItem('gh_token');if(t)document.getElementById('ghToken').value=t;updateVersionLabel();fetchScreen('home');fetchScreen('detail');fetchScreen('estimates');fetchScreen('estimate_detail')}
-const BUILD_VERSION=83;
+function init(){const t=localStorage.getItem('gh_token');if(t)document.getElementById('ghToken').value=t;updateVersionLabel();fetchScreen('home');fetchScreen('detail')}
+const BUILD_VERSION=84;
 function updateVersionLabel(){document.getElementById('versionLabel').textContent='0.0.'+BUILD_VERSION+'-alpha'}
 async function fetchScreen(key){
     const s=screens[key];
@@ -299,7 +296,7 @@ const defaultsEstimateDetail=[
     {type:'spacer',height:8},
     {type:'row',children:[{type:'text',text:'Total',color:'#1A1A1A',fontSize:18},{type:'text',text:'$3,012.99',color:'#1A1A1A',fontSize:18}]}
 ];
-function loadScreenDefs(key){const m={home:defaultsHome,detail:defaultsDetail,estimates:defaultsEstimates,estimate_detail:defaultsEstimateDetail};const defs=m[key]||[];screens[key].elements=defs.map(e=>assignIds(JSON.parse(JSON.stringify(e))))}
+function loadScreenDefs(key){const m={home:defaultsHome,detail:defaultsDetail};const defs=m[key]||[];screens[key].elements=defs.map(e=>assignIds(JSON.parse(JSON.stringify(e))))}
 function activateScreen(){const s=screens[activeScreen];elements=s.elements;document.getElementById('bgColor').value=s.bg;document.getElementById('bgColorCode').textContent=s.bg.toUpperCase();expandedIdx=-1;expandedChildId=null;expandedGcId=null;render()}
 function switchScreen(key){if(key===activeScreen)return;screens[activeScreen].elements=elements;screens[activeScreen].bg=document.getElementById('bgColor').value;activeScreen=key;document.querySelectorAll('.screen-tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+key).classList.add('active');activateScreen()}
 function assignIds(e){e={...e,id:e.id||uid()};if(e.children)e.children=e.children.map(c=>assignIds({...c}));return e}

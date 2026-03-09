@@ -2,7 +2,7 @@
 
 A showcase of [AndroidX Remote Compose](https://developer.android.com/jetpack/androidx/releases/compose-remote) — server-driven UI for Android, rendered natively via Jetpack Compose.
 
-**Live editor:** [Web Editor](https://achatikyan.github.io/remotecompose/)
+**Live editor:** [Web Editor](https://armcha.github.io/remotecompose/)
 
 https://github.com/user-attachments/assets/e6ac7586-1d85-4c68-a751-ca8ffb71a59f
 
@@ -30,7 +30,7 @@ The Android app is a **pure player** — it downloads pre-built binary Remote Co
 
 ### 1. Edit UI in the web editor
 
-The [web editor](https://achatikyan.github.io/remotecompose/) provides a drag-and-drop interface to build UI layouts with:
+The [web editor](https://armcha.github.io/remotecompose/) provides a drag-and-drop interface to build UI layouts with:
 - **Text**, **Button**, **Spacer**, **Divider**, **Card**, **Row** elements
 - Configurable properties: colors, font sizes, padding, corner radius, borders
 - Click actions for navigation and host app events
@@ -64,6 +64,6 @@ The Android app downloads the binary `.rc` files and renders them using `RemoteC
 
 ## Related
 
-- [remotecompose-android](https://github.com/achatikyan/remotecompose-android) — Android player app (pure player, no creation code)
+- [remotecompose-android](https://github.com/armcha/remotecompose-android) — Android player app (pure player, no creation code)
 - [Remote Compose documentation](https://github.com/androidx/androidx/tree/androidx-main/compose/remote/Documentation)
 - [Remote Compose releases](https://developer.android.com/jetpack/androidx/releases/compose-remote)
